@@ -141,10 +141,14 @@
                   <div
                     class="h-[242px] lg:h-[420px] w-full rounded-2xl relative"
                   >
-                    <img
+                    <video
                       :src="video"
                       class="w-full h-full object-cover rounded-2xl"
-                    />
+                      controls
+                      :loop="true"
+                      :volume="0"
+                      :autoplay="true"
+                    ></video>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -157,10 +161,14 @@
                       :class="{ 'mt-[10px] lg:mt-2': index >= 2 }"
                       class="h-[116px] lg:h-[205px] w-[48.4%] lg:w-[49.1%] rounded-2xl relative"
                     >
-                      <img
+                      <video
                         :src="video"
                         class="w-full h-full object-cover rounded-2xl"
-                      />
+                        controls
+                        :loop="true"
+                        :volume="0"
+                        :autoplay="true"
+                      ></video>
                     </div>
                   </div>
                 </div>
@@ -390,9 +398,8 @@ export default {
     const URL = "https://teachablemachine.withgoogle.com/models/YJqqRrpNu/";
 
     const videos = reactive([
-      "http://35.198.245.86/camera1/",
-      "http://35.198.245.86/camera2/",
-      require("@/assets/images/home/pic2.jpeg"),
+      require("@/assets/videos/vid1.mp4"),
+      require("@/assets/videos/vid2.mp4"),
       require("@/assets/images/home/pic3.jpg"),
     ]);
 
